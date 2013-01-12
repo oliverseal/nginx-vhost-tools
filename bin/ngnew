@@ -103,7 +103,7 @@ File.open(File.expand_path(@opts.config_path), "w") do |f|
     else
     	line.gsub!("%SOCKET%", @opts.root + '/sockets/' + @opts.name)
     end
-    line.gsub!("%NAME_AS_VAR%", @opts.name.gsub(/\W\D/, ''))
+    line.gsub!("%NAME_AS_VAR%", @opts.name.gsub(/\W|\D/, ''))
     line.gsub!("%ROOT%", @opts.root)
     # Either strip our php variable, or fill it if we're enabling php
     next if line[/%PHP_CONFIG%/] && !@opts.enable_php
