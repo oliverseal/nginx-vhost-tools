@@ -24,7 +24,7 @@ PHP_CONFIG = "include php_config;"
 @opts = OpenStruct.new
 
 # Set the defaults here
-@opts.template_path = "#{DEFAULT_NGINX_ROOT}/template"
+@opts.template_path = "#{DEFAULT_NGINX_ROOT}/templates/unicorn.conf"
 @opts.user          = ENV["USER"]
 @opts.enable_php    = false
 @opts.overwrite     = false
